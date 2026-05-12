@@ -1,0 +1,300 @@
+/* =========================================================
+   RetailAI Pricing Intelligence Platform
+   Enterprise SaaS Dashboard Styles
+========================================================= */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #030712;
+    color: #f3f4f6;
+    overflow-x: hidden;
+}
+
+/* =========================================================
+   Scrollbar
+========================================================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111827;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #374151;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4b5563;
+}
+
+/* =========================================================
+   Sidebar
+========================================================= */
+
+aside {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(17, 24, 39, 1) 0%,
+            rgba(3, 7, 18, 1) 100%
+        );
+}
+
+/* =========================================================
+   Glassmorphism Cards
+========================================================= */
+
+.bg-gray-900 {
+    backdrop-filter: blur(12px);
+}
+
+/* =========================================================
+   KPI Cards Animation
+========================================================= */
+
+.rounded-3xl {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.rounded-3xl:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35);
+
+    border-color: rgba(99, 102, 241, 0.35);
+}
+
+/* =========================================================
+   Form Inputs
+========================================================= */
+
+input,
+select {
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.2s ease;
+}
+
+input:focus,
+select:focus {
+    border-color: #6366f1 !important;
+
+    box-shadow:
+        0 0 0 4px rgba(99, 102, 241, 0.15);
+
+    transform: scale(1.01);
+}
+
+/* =========================================================
+   Buttons
+========================================================= */
+
+button {
+    transition:
+        all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 24px rgba(79, 70, 229, 0.35);
+}
+
+/* =========================================================
+   Navigation Hover
+========================================================= */
+
+nav div {
+    transition:
+        all 0.25s ease;
+}
+
+nav div:hover {
+    transform: translateX(4px);
+}
+
+/* =========================================================
+   Chart Container
+========================================================= */
+
+canvas {
+    max-height: 400px !important;
+}
+
+/* =========================================================
+   Header Blur Effect
+========================================================= */
+
+header {
+    backdrop-filter: blur(14px);
+}
+
+/* =========================================================
+   Loading Animation Enhancement
+========================================================= */
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================================================
+   AI Insight Cards
+========================================================= */
+
+.bg-gray-800 {
+    transition:
+        all 0.25s ease;
+}
+
+.bg-gray-800:hover {
+    background: rgba(55, 65, 81, 0.8);
+
+    border-color:
+        rgba(99, 102, 241, 0.25);
+
+    transform: translateX(4px);
+}
+
+/* =========================================================
+   Gradient Glow
+========================================================= */
+
+.text-indigo-400,
+.text-green-400,
+.text-yellow-400 {
+    text-shadow:
+        0 0 12px rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================================
+   Enterprise Shadows
+========================================================= */
+
+.shadow-enterprise {
+    box-shadow:
+        0 25px 50px -12px rgba(0, 0, 0, 0.45);
+}
+
+/* =========================================================
+   Responsive Improvements
+========================================================= */
+
+@media (max-width: 1280px) {
+
+    aside {
+        width: 100%;
+        height: auto;
+    }
+
+    .flex.min-h-screen {
+        flex-direction: column;
+    }
+
+    .sticky {
+        position: relative !important;
+        top: auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .p-10 {
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.75rem !important;
+    }
+
+    h3 {
+        font-size: 1.4rem !important;
+    }
+}
+
+/* =========================================================
+   Dashboard Background Glow
+========================================================= */
+
+main::before {
+    content: "";
+
+    position: fixed;
+
+    top: -200px;
+    right: -200px;
+
+    width: 500px;
+    height: 500px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(99, 102, 241, 0.12),
+            transparent 70%
+        );
+
+    z-index: -1;
+}
+
+main::after {
+    content: "";
+
+    position: fixed;
+
+    bottom: -250px;
+    left: -200px;
+
+    width: 500px;
+    height: 500px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(16, 185, 129, 0.08),
+            transparent 70%
+        );
+
+    z-index: -1;
+}
+
+/* =========================================================
+   Mobile Sidebar Optimization
+========================================================= */
+
+@media (max-width: 768px) {
+
+    aside {
+        width: 100%;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    nav div {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+}
