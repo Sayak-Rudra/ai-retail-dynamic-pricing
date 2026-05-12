@@ -1,9 +1,16 @@
 services:
   - type: web
     name: dynamic-pricing-app
-    env: python
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn --bind 0.0.0.0:8000 app:app"
+    runtime: python
+    plan: free
+
+    buildCommand: pip install -r requirements.txt
+
+    startCommand: gunicorn app:app
+
     envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+
       - key: FLASK_APP
-        value: "app.py"
+        value: app.py
